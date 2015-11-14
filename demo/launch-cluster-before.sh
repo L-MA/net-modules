@@ -6,6 +6,7 @@ DEMO_DIR=`dirname $0`
 PROJECT_DIR=$DEMO_DIR/..
 
 echo "Launching cluster with network isolation modules disabled..."
+echo $DEMO_DIR
 
 pushd $DEMO_DIR/before
 docker-compose -p netmodules up -d

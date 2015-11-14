@@ -1,4 +1,4 @@
-FROM spikecurtis/mesos-modules-dev-phusion:0.26.0-pre
+FROM lukema/mesos-modules-dev-phusion:0.26.0-rcl
 MAINTAINER Spike Curtis <spike@projectcalico.org>
 
 ####################

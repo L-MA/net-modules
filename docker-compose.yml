@@ -3,7 +3,7 @@ zookeeper:
   hostname: zookeeper
 
 mesosmaster:
-  image: spikecurtis/mesos-modules-dev:0.26.0-pre
+  image: lukema/mesos-modules-dev:0.26.0-rcl
   hostname: mesosmaster
   command: /mesos/build/bin/mesos-master.sh
   environment:
@@ -44,7 +44,7 @@ slave:
    - 192.168.255.254
 
 marathon:
-  image: mesosphere/marathon:v0.9.1
+  image: spikecurtis/marathon:0.26-pre
   environment:
     - MARATHON_MASTER=zk://zookeeper:2181/mesos
     - MARATHON_ZK=zk://zookeeper:2181/marathon

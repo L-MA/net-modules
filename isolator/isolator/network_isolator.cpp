@@ -99,7 +99,7 @@ static Try<OutProto> runCommand(const string& path, const InProto& command)
       process::Subprocess::PIPE());
   CHECK_SOME(child);
 
-  string jsonCommand = stringify(JSON::Protobuf(command));
+  string jsonCommand = stringify(JSON::protobuf(command));
 
   LOG(INFO) << "Sending command to " + path + ": " << jsonCommand;
   process::io::write(child.get().in().get(), jsonCommand);
